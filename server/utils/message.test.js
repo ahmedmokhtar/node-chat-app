@@ -12,6 +12,7 @@ describe('generateMessage', () => {
         // expect(message.text).toBe(text)
         expect(message).toHaveProperty('from', from)
         expect(message).toHaveProperty('text', text)
+        expect(message).toMatchObject({from, text})
         expect(typeof message.createdAt).toBe('number')
     })
 })
